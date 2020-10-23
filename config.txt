@@ -1,0 +1,150 @@
+# client configuration parameters
+[Database]
+url:	URL of remote database API
+apikey:	key for API
+
+[DebugDatabase]
+url:	URL of local test database API
+apikey:	hsbcwkjaxqdmyme
+
+[DEFAULT]
+# recipients on my server
+# fixed addresses on target server
+toaddr:		x@x
+asciito:	x@x
+noeaito:	x@x
+dgto:		x@x
+# ascii version of dgto
+adgto:		x@x
+# address on home server to use as From on external mail
+srvfrom:	x@x
+# server MTA to retrieve messages from Maildir
+srvhost:	x
+srvport:	443
+srvuser:	x
+srvdir:		x
+
+# for script debugging
+testimaphost:	x
+testimapuser:	x
+testimappw:	x
+
+# for local sendmail
+sendmail:	/usr/sbin/sendmail
+
+[Postfix]
+# MSA/MTA parameters
+submitserver:	x
+mailserver:	x
+submituser:	x
+submitpass:	x
+
+# sends pretty fast
+msgtime:	1
+
+# no standalone MSA
+standalone:	False
+# doesn't downgrade
+downgrade:	False
+
+# for simple tests to postfix server
+# also used in other direction for MTA
+# U@U on test server
+fromaddr:	x@x
+# A@A on test server
+asciifrom:	x@x
+# A@U on test server
+dgfrom:		x@x
+
+# postfix server mailbox
+
+# corresponds to fromaddr
+localstore: ssh
+host:	x
+port:	22
+user:	x
+dir:	x
+
+# MTA tests
+# send by local or submit
+testsend:	local
+
+# postfix server mailbox
+sendhost:	x
+sendport:	22
+senduser:	x
+senddir:	/tmp
+
+# mailbox for downgradable address
+# corresponds to dgfrom
+dghost:	x
+dgport:	22
+dguser:	x
+dgdir:	x
+
+[Coremail]
+
+# IMAP test
+# enable command is broken
+badenable:	True
+# POP TEST
+poplang:	i-default
+popport:	110
+
+[Hotmail]
+# fake To address for append test
+faketo:		x@x
+poplang:	en
+popno:	245
+
+[Gmail]
+# server has IDN hostname
+idnhost:	False
+# MSA/MTA parameters
+submitserver:	smtp.gmail.com
+mailserver:	aspmx.l.google.com
+# port 465
+submits:	True
+
+submituser:	x@x
+submitpass:	x
+
+# sends pretty fast
+msgtime:	1
+
+# no standalone MSA
+standalone:	False
+# doesn't downgrade
+downgrade:	False
+
+# A@A on test server
+asciifrom:	x@x
+
+#  server mailbox
+
+# corresponds to fromaddr
+localstore: imap
+imaphost: imap.gmail.com
+imapuser:	x@x
+imappw:		x
+# look there too
+#junkfolder:	"[Gmail]/Spam"
+
+# MTA tests
+# send by local or submit
+testsend:	submit
+
+# look for bounces
+dgimaphost: imap.gmail.com
+dgimapuser:	x@x
+dgimappw:	x@x
+# look there too
+#dgjunkfolder:	"[Gmail]/Spam"
+
+# MDA tests
+doesutf8:	False
+# fake To address for append test
+faketo:		x@x
+poplang:	en
+popno:	108
+

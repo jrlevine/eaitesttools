@@ -23,11 +23,15 @@ Needs python modules bottle, beaker, pymysql
 
 eaitest.sql:
 Creates database tables
+
 eaitest.py:
 Main web app module
+
 eaidb.py:
 Database module for web app
+
 views, static:
+templates and static files
 
 ## Test scripts
 
@@ -35,21 +39,36 @@ Needs python modules requests, paramiko, imapclient
 
 testgroup.py:
 Base module for test
+
 msatestgroup.py:
 Do MSA tests
+
 mtatestgroup.py:
 Do MTA tests
+
 mdatestgroup.py:
 Do MDA tests
+
 tclient.py:
 Web API client to manage results in the web server database
+
+config.txt:
+Target configuration parameters that tests use.
 
 ## Reports
 
 wrtitess.py:
 Write results in XLSX spreadsheets.  Needs python module xlsxwriter.
+
 writegs:py:
 Write results in Google sheets.  Needs python modules for the Google
 API.
 
+## Miscellaneous
+
+ldtest.py:
+Load test descriptions from CSV files
+
+ldproducts.py:
+Load products to test from CSV file
 
