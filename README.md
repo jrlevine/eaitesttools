@@ -1,7 +1,7 @@
 # Eaitesttools
 Tools for testing EAI compliance of mail software
 
-These are the software I used to for tests of EAI conformance. There
+These are the software we used to for tests of EAI conformance. There
 is a web application to track and report test results, some scripts to
 do MSA, MTA, and MDA tests, and two scripts to extract results into
 Excel XLSX files or store them into Google Sheets spreadsheets.
@@ -9,7 +9,7 @@ Excel XLSX files or store them into Google Sheets spreadsheets.
 They are provided with no support and no promise they will work in
 other environments. Many of the tests involve sending a test message
 and then looking at it after it is received. Since test environments
-don't always provide an EAI-confirmant environment, some tests use ssh
+don't always provide a reliable way to send or receive EAI messages, some tests use ssh
 to a remote server to submit or retrieve messages, or call sendmail on
 the local host to send messages.
 
@@ -21,7 +21,7 @@ John Levine, Standcore LLC, October 2020
 
 ## Test tool server
 
-Needs python modules bottle, beaker, pymysql
+These need the python modules bottle, beaker, pymysql
 
 eaitest.sql:
 Creates database tables
@@ -37,7 +37,7 @@ templates and static files
 
 ## Test scripts
 
-Needs python modules requests, paramiko, imapclient
+These need python modules requests, paramiko, imapclient
 
 testgroup.py:
 Base module for test
